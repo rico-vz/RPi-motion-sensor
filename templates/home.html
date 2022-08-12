@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RRD Control</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="overflow-hidden">
+    <nav class="font-sans flex flex-col text-center content-center sm:flex-row sm:text-left sm:justify-between py-2 px-6 bg-white shadow sm:items-baseline w-full">
+        <div class="mb-2 sm:mb-0 flex flex-row
+        ">
+          <div class="h-10 w-10 self-center mr-2">
+            <img class="h-10 w-10 self-center" src="https://cdn-icons-png.flaticon.com/512/5969/5969184.png" />
+          </div>
+          <div>
+            <a class="text-2xl no-underline text-grey-darkest hover:text-blue-dark font-sans font-bold">Control Panel</a><br>
+            <span class="text-xs text-grey-dark">Ridylanka 💡</span>
+          </div>
+        </div>
+      </nav>
+
+      <div class="relative min-h-screen flex items-center justify-center bg-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8 bg-gray-500 bg-no-repeat bg-cover relative items-center"
+	style="background-image: url(https://images.unsplash.com/photo-1578568579318-879819f03cb2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80);">
+	<div class="absolute bg-black opacity-60 inset-0 z-0"></div>
+	<div class="max-w-md w-full space-y-8 p-10 bg-white rounded-xl shadow-lg z-10">
+<div class="grid  gap-8 grid-cols-1">
+	<div class="flex flex-col ">
+			<div class="flex flex-col sm:flex-row items-center">
+				<h2 class="font-semibold text-lg mr-auto">Motion Light</h2>
+				<div class="w-full sm:w-auto sm:ml-auto mt-3 sm:mt-0"></div>
+			</div>
+			<div class="mt-5">
+				<div class="form">
+					<div class="md:space-y-2 mb-3">
+						
+							</div>
+						</div>
+						<div class="md:flex flex-row md:space-x-4 w-full text-xs flex items-center justify-center">
+							<div class="mb-3 space-y-2 w-full text-xs ">
+                                <form action="/setTimer" method="get">
+                                    <label class="font-semibold text-gray-600 py-2">Turn LED off after X seconds:</label>
+                                    <input placeholder="5" class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded-lg h-10 px-4" type="number" name="timeOut" id="timeOut">
+                                    <input class="mb-2 md:mb-0 bg-gray-400 py-2 px-2 text-sm shadow-sm font-medium tracking-wider text-white rounded-full hover:shadow-lg hover:bg-gray-500 mt-5 mr-5 hover:cursor-pointer" type="submit" value="Change">
+                                </form>
+
+							</div>
+						</div>
+                        <hr>
+                        <div class="flex items-center justify-center">
+                        <a class="mb-2 md:mb-0 bg-green-400 py-4 px-3 text-sm shadow-sm font-medium tracking-wider text-white rounded-full hover:shadow-lg hover:bg-green-500 mt-5 mr-5" href="http://127.0.0.1:5000/changeState?state=on">Turn ON</a>
+                        <a class="mb-2 md:mb-0 bg-red-400 py-4 px-3 text-sm shadow-sm font-medium tracking-wider text-white rounded-full hover:shadow-lg hover:bg-red-500 mt-5 ml-5" href="http://127.0.0.1:5000/changeState?state=off">Turn OFF</a>
+                        </div>
+                    </div>
+						</div>
+					</div>
+				</div>
+			</div>
+</body>
+</html>
